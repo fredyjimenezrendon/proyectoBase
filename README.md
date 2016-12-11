@@ -1,5 +1,5 @@
 # proyectoBase
-Proyecto base para proyecto web Spring 4 + Spring Security 4 + Hibernate 4 + MySQL
+Base para proyecto java web Spring 4 + Spring Security 4 + Hibernate 4 + MySQL
 
 ***Base de datos***
 
