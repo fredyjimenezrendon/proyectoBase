@@ -19,14 +19,10 @@ public class SpringWebAppInitializer extends WebMvcConfigurerAdapter implements 
 
 	@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {
-        AnnotationConfigWebApplicationContext appContext = new AnnotationConfigWebApplicationContext();
-        servletContext.setSessionTrackingModes(EnumSet.of(SessionTrackingMode.COOKIE));
-        appContext.register(ApplicationContextConfig.class);
-        servletContext.addFilter("securityFilter", new DelegatingFilterProxy("springSecurityFilterChain")).addMappingForUrlPatterns(null, false, "/*");
-        ServletRegistration.Dynamic dispatcher = servletContext.addServlet("SpringDispatcher", new DispatcherServlet(appContext));
-        dispatcher.setLoadOnStartup(1);
-        dispatcher.addMapping("/");
-        
+		AnnotationConfigWebApplicationContext appContext = new AnnotationConfigWebApplicationContext();
+		servletContext.setSessionTrackingModes(EnumSet.of(SessionTrackingMode.COOKIE));
+		appContext.register(ApplicationContextConfig.class);
+		servletContext.addFilter("securityFilter", new DelegatingFilterProxy("springSecurityFilterChain")).addMappingForUrlPatterns(null, false, "/*");  
 	}
 	
 
