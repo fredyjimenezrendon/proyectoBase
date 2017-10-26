@@ -31,5 +31,5 @@ CREATE TABLE `persistent_logins` (
   `username` VARCHAR(100) NOT NULL, 
   `series` VARCHAR(64) PRIMARY KEY, 
   `token` VARCHAR(64) NOT NULL, 
-  `last_used` timestamp NOTT NULL
+  `last_used` timestamp NOT NULL
 );
